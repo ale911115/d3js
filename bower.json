@@ -36,5 +36,23 @@
   "resolutions": {
     "jquery": "~2.1.4",
     "angular": "~1.5.3"
-  }
+  },
+  "homepage": "https://github.com/ale911115/d3js",
+  "authors": [
+    "ale911115 <ale911115@gmail.com>"
+  ],
+  "description": "private project for d3js study purpose",
+  "main": "",
+  "keywords": [
+    "d3.js",
+    "study"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }
