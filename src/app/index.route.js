@@ -46,7 +46,7 @@
         },
         views: {
           '': {
-            templateUrl: 'app/home/home.html',
+            templateUrl: 'app/d3js/d3js-list.html',
             controller: 'D3JSController',
             controllerAs: 'vm'
           }
