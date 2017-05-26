@@ -2,12 +2,11 @@
   'use strict';
 
   angular
-    .module('d3js')
+    .module('app')
     .controller('HomeController', HomeController);
 
   /** @ngInject */
-  function HomeController($timeout) {
-    var vm = this;
+  function HomeController() {
 
     activate();
 

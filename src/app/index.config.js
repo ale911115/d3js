@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('d3js')
+    .module('app')
     .config(config);
 
   /** @ngInject */

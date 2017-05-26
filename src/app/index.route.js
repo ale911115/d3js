@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('d3js')
+    .module('app')
     .config(routerConfig);
 
   /** @ngInject */
@@ -12,10 +12,10 @@
         abstract: true,
         views: {
           '': {
-            templateUrl: 'app/shared/layout-default.html',
+            templateUrl: 'app/shared/layout-default.html'
           },
           'header@root': {
-            templateUrl: 'app/shared/navbar/navbar.tpl.html',
+            templateUrl: 'app/shared/navbar/navbar.tpl.html'
           }
           // ,
           // 'footer@root': {
@@ -35,10 +35,24 @@
           '': {
             templateUrl: 'app/home/home.html',
             controller: 'HomeController',
-            controllerAs: 'vm',
+            controllerAs: 'vm'
+          }
+        }
+      })
+      .state('root.d3js', {
+        url: '/d3js',
+        data: {
+          requireLogin: true
+        },
+        views: {
+          '': {
+            templateUrl: 'app/home/home.html',
+            controller: 'D3JSController',
+            controllerAs: 'vm'
           }
         }
       });
+
 
     $urlRouterProvider.otherwise('/');
   }
