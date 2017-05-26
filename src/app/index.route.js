@@ -8,11 +8,36 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('home', {
+    .state('root', {
+        abstract: true,
+        views: {
+          '': {
+            templateUrl: 'app/shared/layout-default.html',
+          },
+          'header@root': {
+            templateUrl: 'app/shared/navbar/navbar.tpl.html',
+          }
+          // ,
+          // 'footer@root': {
+          //   templateUrl: 'app/shared/templates/footer.tpl.html'
+          // }
+        },
+        data: {
+          requireLogin: true
+        }
+      })
+      .state('root.home', {
         url: '/',
-        templateUrl: 'app/main/main.html',
-        controller: 'MainController',
-        controllerAs: 'main'
+        data: {
+          requireLogin: true
+        },
+        views: {
+          '': {
+            templateUrl: 'app/home/home.html',
+            controller: 'HomeController',
+            controllerAs: 'vm',
+          }
+        }
       });
 
     $urlRouterProvider.otherwise('/');
