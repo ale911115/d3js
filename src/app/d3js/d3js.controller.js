@@ -1,19 +1,21 @@
-(function() {
-'use strict';
+(function () {
+  'use strict';
 
-    angular
-        .module('app')
-        .controller('D3JSController', D3JSController);
+  angular
+    .module('app')
+    .controller('D3JSController', D3JSController);
 
-    D3JSController.inject = [];
-    function D3JSController() {
-        var vm = this;
-        vm.title = "D3.js is awesome!"
+  D3JSController.inject = [];
 
-        activate();
+  function D3JSController() {
+    var vm = this;
+    vm.title = "D3.js is awesome!"
 
-        ////////////////
 
-        function activate() { }
-    }
+    activate();
+
+    ////////////////
+
+    function activate() {}
+  }
 })();

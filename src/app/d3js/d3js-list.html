@@ -1,7 +1,16 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center"> 
-            <h1>{{vm.title}}</h1>
-        </div>
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <h1>{{vm.title}}</h1>
     </div>
+  </div>
+  <div class="row">
+    <ul class="list-unstyled">
+      <li><a ui-sref='root.d3js.linechart'>line chart</a></li>
+      <li><a ui-sref='root.d3js.scalingdata'>scaling data</a></li>
+    </ul>
+  </div>
+  <div class="row">
+    <div ui-view></div>
+  </div>
 </div>

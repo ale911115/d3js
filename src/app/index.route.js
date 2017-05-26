@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   angular
@@ -8,7 +8,7 @@
   /** @ngInject */
   function routerConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-    .state('root', {
+      .state('root', {
         abstract: true,
         views: {
           '': {
@@ -21,9 +21,6 @@
           // 'footer@root': {
           //   templateUrl: 'app/shared/templates/footer.tpl.html'
           // }
-        },
-        data: {
-          requireLogin: true
         }
       })
       .state('root.home', {
@@ -41,13 +38,30 @@
       })
       .state('root.d3js', {
         url: '/d3js',
-        data: {
-          requireLogin: true
-        },
         views: {
           '': {
             templateUrl: 'app/d3js/d3js-list.html',
             controller: 'D3JSController',
+            controllerAs: 'vm'
+          }
+        }
+      })
+      .state('root.d3js.linechart', {
+        url: '/linechart',
+        views: {
+          '': {
+            templateUrl: 'app/d3js/line-chart/d3js-line-chart.html',
+            controller: 'D3JSLineChartController',
+            controllerAs: 'vm'
+          }
+        }
+      })
+      .state('root.d3js.scalingdata', {
+        url: '/scalingdata',
+        views: {
+          '': {
+            templateUrl: 'app/d3js/scaling-data/d3js-scaling-data.html',
+            controller: 'D3JSScalingDataController',
             controllerAs: 'vm'
           }
         }
