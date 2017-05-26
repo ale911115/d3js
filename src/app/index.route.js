@@ -65,6 +65,16 @@
             controllerAs: 'vm'
           }
         }
+      })
+      .state('root.d3js.axis', {
+        url: '/axis',
+        views: {
+          '': {
+            templateUrl: 'app/d3js/axis/d3js-axis.html',
+            controller: 'D3JSAxisController',
+            controllerAs: 'vm'
+          }
+        }
       });
 
 

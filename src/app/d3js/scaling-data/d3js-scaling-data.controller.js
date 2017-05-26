@@ -8,13 +8,11 @@
   D3JSScalingDataController.inject;
 
   function D3JSScalingDataController() {
-    var vm = this;
-
     var h = 300;
-    var w = 500;
+    var w = 800;
 
     function showHeader(ds) {
-      d3.select("#scaling-data").append("h3")
+      d3.select("#scaling-data").append("h4")
         .text(ds.category + "Sales (2013)");
     }
 
