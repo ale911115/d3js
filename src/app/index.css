@@ -8,9 +8,11 @@ footer {
 }
 
 .axis path,
-.axis line {
+.axis line, 
+.axis1 path,
+.axis1 line {
   fill: none;
-  stroke: black;
+  stroke: #E6E7E8;
   shape-rendering: crispEdges;
 }
 
@@ -19,8 +21,67 @@ footer {
   font-size: 10px
 }
 
-/*h3 {
-  font-family: sans-serif;
-  font-weight: 300;
-  font-size: 16px
-}*/
+.x.axis path, .x.axis1 path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke-width: 1.5px;
+}
+
+.legend-box {
+  cursor: pointer;  
+}
+
+#mouse-tracker {
+  stroke: #E6E7E8;
+  stroke-width: 1px;
+}
+
+.hover-line { 
+  stroke: #E6E7E8;
+  fill: none;
+  stroke-width: 1px;
+  left: 10px;
+  shape-rendering: crispEdges;
+  opacity: 1e-6;
+}
+
+.hover-text {
+  stroke: none;
+  font-size: 30px;
+  font-weight: bold;
+  fill: #000000;
+}
+
+.tooltip {
+  font-weight: normal;
+}
+
+.brush .extent {
+  stroke: #FFF;
+  shape-rendering: crispEdges;
+}
+
+.tt {
+	background-color: #fff;
+	padding: 8px;
+	outline: 1px solid #ccc;
+	display: none;
+	position: absolute;
+}
+
+.tt .name {
+	font-size: 14px;
+}
+
+.tt .date {
+	text-transform: uppercase;
+	font-size: 12px;
+}
+
+.tt .rate {
+	font-size: 18px;
+	font-weight: bold;
+}

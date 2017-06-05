@@ -75,8 +75,27 @@
             controllerAs: 'vm'
           }
         }
+      })
+      .state('root.d3js.multiserieslinechart', {
+        url: '/multiserieslinechart',
+        views: {
+          '': {
+            templateUrl: 'app/d3js/multi-series-line-chart/d3js-multi-series-line-chart.html',
+            controller: 'D3JSMultiSeriesLineChartController',
+            controllerAs: 'vm'
+          }
+        }
+      })
+      .state('root.d3js.mychart', {
+        url: '/mychart',
+        views: {
+          '': {
+            templateUrl: 'app/d3js/my-chart/d3js-my-chart.html',
+            controller: 'D3JSMyChartController',
+            controllerAs: 'vm'
+          }
+        }
       });
-
 
     $urlRouterProvider.otherwise('/');
   }

@@ -28,7 +28,6 @@
       return new Date(year, month, day);
     }
 
-
     // Adapted from http://martin.ankerl.com/2009/12/09/how-to-create-random-colors-programmatically/
     function hslToRgb(h, s, l) {
       var r, g, b;
@@ -118,7 +117,11 @@
           "stroke-width": 2,
           "fill": "none"
         });
-    }
+
+    
+    
+  
+}
 
     d3.json("https://api.github.com/repos/bsullins/d3js-resources/contents/monthlySalesbyCategoryMultiple.json", function (error, data) {
 
